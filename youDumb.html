@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>youDumb</title>
+    <style>
+        #test {
+            position: absolute;
+        }
+        
+        #main{
+            display: none;
+            margin-top: 220px;
+            margin-left: 550px;
+            width: 50%;
+            padding: 10px;
+        }
+        
+        #main button{
+            margin-top: 20px;
+            width: 100px;
+            height: 40px;
+        }
+        
+        #q-h{
+            margin-left: 25px;
+        }
+        
+        #test{
+            margin-left: 10px;
+        }
+        
+        #result{
+            display: none;
+            margin-top: 220px;
+            margin-left:550px;
+            width: 50%;
+            padding: 10px;
+        
+        }
+        
+        #front_page {
+            margin-top: 220px;
+            margin-left: 500px;
+            width: 50%;
+            padding: 10px;
+        }
+        
+        #form-rep{
+            margin-left: 150px;
+        }        
+    </style>
+</head>
+<body>
+    <div id="front_page">
+        <h2>Do you want to take the survey?</h2>
+        <button id="form-rep">Yes</button>
+    </div>
+    <div id="main">
+        <h2 id="q-h">Are you Dumb?</h2>
+        <button id="yes">Yes</button>
+        <button id="test">No</button>
+    </div>
+    <div id="result">
+        <h2>I knew it!!!</h2>
+    </div>
+    
+    <script>
+
+        main = document.getElementById("main")
+        front_page = document.getElementById("front_page")
+        yes_btn = document.getElementById("yes")
+        result = document.getElementById("result")
+
+        document.getElementById("form-rep").onclick = function() {
+            front_page.style.display = "none";
+            main.style.display = "block";
+        }
+
+        yes_btn.onclick = function(){
+            main.style.display = "none";
+            result.style.display = "block"
+        }
+
+
+        btn = $("#test")
+        $(btn).on('mouseover', function() {
+            $(this).css({
+              'top': Math.random() * window.innerHeight + "px",
+              'left': Math.random() * window.innerWidth + "px"
+            });
+        })
+    </script>
+</body>
+</html>
